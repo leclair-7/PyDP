@@ -11,6 +11,9 @@ void init_base_logging(py::module &);
 // algorithms
 void init_algorithms(py::module &);
 
+// rand
+void init_rand(py::module &);
+
 // proto
 void init_proto(py::module &);
 
@@ -21,6 +24,6 @@ PYBIND11_MODULE(pydp, m) {
   init_base_logging(m);
 
   init_algorithms(m);
-
+  init_rand(m);
   init_proto(m);
 }

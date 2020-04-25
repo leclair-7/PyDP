@@ -1,0 +1,13 @@
+// Provides bindings for rand
+#include "../pydp_lib/casting.hpp"
+#include "pybind11/pybind11.h"
+#include "differential_privacy/algorithms/rand.h"
+
+namespace py = pybind11;
+namespace dp = differential_privacy;
+
+void init_rand(py::module & m) {
+
+	m.def("UniformDouble",&dp::UniformDouble);
+	m.def("Geometric",&dp::Geometric);
+}
